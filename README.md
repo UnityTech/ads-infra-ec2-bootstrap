@@ -23,7 +23,7 @@ $ cat > foo.py <<-EOM
 > js = AWS('s3 ls')
 > print 'found %d S3 entries' % len(js)
 >EOM
-$ docker run -it $(pwd):/home/local/scripts ads-infra-ec2-bootstrap
+$ docker run -it -v $(pwd):/home/local/scripts ads-infra-ec2-bootstrap
 executing scripts/foo.py (exit 0) ->
   [ok] AWS-CLI (i-0ff68e06b9771448c) -> "s3 ls"
   found 10 S3 entries
